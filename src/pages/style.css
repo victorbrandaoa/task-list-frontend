@@ -1,0 +1,27 @@
+.kanban-page {
+    display: flex;
+    min-height: 100vh;
+    background-color: #212121;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 0px 0px 450px;
+    align-self: flex-start;
+}
+
+button {
+    color: #E7E7E7;
+    background-color: #383838;
+    border-radius: 10px;
+    border-style: none;
+    width: 100px;
+    height: 50px;
+}

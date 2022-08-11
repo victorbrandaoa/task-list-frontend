@@ -6,11 +6,12 @@ import TaskCard from './components/taskCard';
 import reportWebVitals from './reportWebVitals';
 import KanbanColumn from './components/kanbanColumn';
 import KanbanBoard from './components/kanbanBoard';
+import KanbanPage from './pages';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <KanbanBoard />
+    <KanbanPage />
   </React.StrictMode>
 );
 
