@@ -1,11 +1,27 @@
+.kanban-column {
+    width: 250px;
+    border-radius: 10px;
+}
+
 .column-title {
-    border: solid 1px black;
     border-radius: 10px 10px 0px 0px;
     color: #E7E7E7;
     background-color: #023F7A;
+    text-align: center;
+    height: 50px;
+    padding-top: 20px;
 }
 
 .task-list {
+    border-radius: 0px 0px 10px 10px;  
+    padding: 10px 10px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
+    background-color: #383838;
+}
+
+.column-title h2 {
+    margin: 0;
 }
