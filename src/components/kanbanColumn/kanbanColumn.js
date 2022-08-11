@@ -5,7 +5,7 @@ import './style.css';
 export default function KanbanColumn(props) {
     return (
         <div className="kanban-column">
-            <div>
+            <div className="column-title">
                 <h2>Backlog</h2>
             </div>
 
