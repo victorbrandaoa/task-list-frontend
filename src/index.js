@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import TaskCard from './components/taskCard';
 import reportWebVitals from './reportWebVitals';
+import KanbanColumn from './components/kanbanColumn';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <KanbanColumn />
   </React.StrictMode>
 );
 

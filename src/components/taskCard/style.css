@@ -1,0 +1,20 @@
+.task-card {
+    border-radius: 10px;
+    width: 200px;
+    height: 120px;
+    padding: 10px;
+    color: #E7E7E7;
+    background-color: #212121;
+}
+
+.task-kind {
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    background-color: #383838;
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 60px;
+}
