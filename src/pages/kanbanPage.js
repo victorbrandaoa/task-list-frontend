@@ -1,29 +1,40 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import KanbanBoard from "../components/kanbanBoard/kanbanBoard";
 import NavBar from "../components/navBar";
 import "./style.css";
 
-const kanbanModel = {
-    "backlog": [{name: "teste", kind: "testekind" }],
-    "inProgress": [],
-    "finished": [{name: "teste", kind: "testekind" }]
+// this data is mock
+const kanbanBoardData = {
+    "backlog": [
+        {name: "task3", kind: "planning" },
+        {name: "task4", kind: "presenting" }
+    ],
+    "inProgress": [
+        {name: "task2", kind: "testing" },
+        {name: "task6", kind: "development" }
+    ],
+    "finished": [
+        {name: "task1", kind: "development" }
+    ]
 };
 
-const kanbanCanceledModel = {
-    "canceled": []
-};
+const canceledTasksData = {
+    "canceled": [
+        {name: "task5", kind: "modelling" }
+    ]
+}
 
 export default function KanbanPage() {
-    const [kanban, setKanban] = useState(kanbanModel);
+    const [kanban, setKanban] = useState(kanbanBoardData);
     const [kanbanType, setKanbanType] = useState("normal");
 
     const changeBoard = (tipoKanban="normal")  => {
         if (tipoKanban === "canceled") {
-            setKanban({ ...kanbanCanceledModel });
+            setKanban({ ...canceledTasksData });
             setKanbanType("canceled");
         } else {
-            setKanban({ ...kanbanModel });
+            setKanban({ ...kanbanBoardData });
             setKanbanType("normal");
         };
     }
@@ -33,7 +44,7 @@ export default function KanbanPage() {
             <NavBar />
             <div className="main">
                 <div className="nav-buttons">
-                    <button disabled={kanbanType === "normal"} onClick={() => changeBoard()}> Kanban </button>
+                    <button disabled={kanbanType === "normal"} onClick={() => changeBoard()}>Kanban</button>
                     <button disabled={kanbanType === "canceled"} onClick={() => changeBoard("canceled")}>Canceled Tasks</button>
                 </div>
                 <div  className="board">
